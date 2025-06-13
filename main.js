@@ -90,10 +90,10 @@ function createLaser() {
     const minGapPosition = canvas.height * 0.3;
     const maxGapPosition = canvas.height * 0.7 - LASER_GAP;
     const gapPosition = minGapPosition + Math.random() * (maxGapPosition - minGapPosition);
-    
+
     // Define random offset for pipe variation
     const randomOffset = Math.random();
-    
+
     // Set the --random-offset CSS variable
     document.documentElement.style.setProperty('--random-offset', randomOffset);
 
@@ -149,7 +149,7 @@ function updateLasers() {
 function drawLasers() {
     lasers.forEach(laser => {
         ctx.fillStyle = laser.color;
-        
+
         // Apply random offset to pipe positions
         const offset = laser.randomOffset * 20; // Adjust the multiplier for more or less variation
 
@@ -186,7 +186,7 @@ function checkCollisions() {
         }
     }
 }
-    
+
 function gameOver() {
     gameState = 'gameover';
     gameOverScreen.classList.remove('hidden');
@@ -252,7 +252,6 @@ function gameLoop(timestamp) {
 
     drawLasers();
     drone.draw();
-    drawPlayerName(); // Draw player name in every frame
 
     requestAnimationFrame(gameLoop);
 }
@@ -298,4 +297,3 @@ if (!canvas) {
     gameLoop(0);
     console.log('Game initialized');
 }
-
