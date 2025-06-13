@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Flappy</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui">
+            <div id="loading-screen" class="screen">
+                <h2>INITIALIZING</h2>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+            </div>
+            <div id="start-screen" class="screen hidden">
+                <h1>CYBER FLAPPY</h1>
+                <p>Press SPACE or TAP to start</p>
+                <div class="instructions">
+                    <p>Navigate your cyber drone through laser fields</p>
+                    <p>Avoid collisions to survive</p>
+                </div>
+            </div>
+            <div id="game-over-screen" class="screen hidden">
+                <h2>SYSTEM FAILURE</h2>
+                <p>Score: <span id="final-score">0</span></p>
+                <button id="restart-btn">REBOOT</button>
+            </div>
+            <div id="score-display">0</div>
+            <div id="player-name" class="ali-nasser">Ali Nasser</div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+<!-- Player Name -->
+<div id="player-name">Ali Nasser</div>
