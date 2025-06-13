@@ -181,20 +181,12 @@ body {
     z-index: 2;
 }
 
-
-.ali-nasser {
-    font-size: 1.5rem; /* Decreased font size */
-    color: var(--neon-pink);
-    text-shadow: var(--glow) var(--neon-purple);
-    letter-spacing: 2px;
-    animation: pulse 1.5s infinite alternate;
-}
 /* Player Name Styles */
 #player-name {
     position: absolute;
     top: 10px;
-    right: 10px;
-    font-size: 1.5rem; /* Ensure the font size is consistent */
+    left: 10px;
+    font-size: 0.8rem; /* Ensure the font size is consistent */
     color: var(--neon-pink);
     text-shadow: var(--glow) var(--neon-purple);
     letter-spacing: 2px;
